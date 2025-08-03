@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Topolio | Kontak</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/main.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+      .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  padding: 15px 20px;
+}
+
+.nav-links li a:hover {
+  color: orange; /* Ganti dengan warna yang kamu suka */
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #111;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    display: none;
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+    .contact-section {
+      text-align: center;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .contact-intro {
+      color: #ddd;
+      margin-bottom: 2rem;
+      font-size: 1rem;
+    }
+
+    .contact-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .contact-item {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 1.5rem 2rem;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      min-width: 260px;
+      transition: background 0.3s ease, transform 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    }
+
+    .contact-item:hover {
+      background: rgba(255, 255, 255, 0.08);
+      transform: translateY(-5px);
+    }
+
+    .contact-icon {
+      font-size: 2rem;
+      color: #00bfff;
+      width: 48px;
+      text-align: center;
+    }
+
+    .contact-item h3 {
+      color: orange;
+      margin: 0;
+      font-size: 1.1rem;
+    }
+
+    .contact-item p,
+    .contact-item a {
+      color: #fff;
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .contact-box {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    footer {
+      text-align: center;
+      color: #ccc;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+
+  .action-buttons {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.action-buttons a {
+  background-color: orange;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AIDIL PUTRA</h1>
+    <nav class="navbar">
+    <div class="hamburger" id="hamburger">&#9776;</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">Tentang</a></li>
+      <li><a href="projects.html">Project</a></li>
+      <li><a href="contact.html">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
+  </script>
+  </header>
+
+
+  <section class="page-bg">
+    <div class="page-content contact-section">
+      <h1 class="section-title">Hubungi Saya</h1>
+      <p class="contact-intro">Saya terbuka untuk kolaborasi, proyek freelance, atau sekadar berdiskusi santai.</p>
+      <div class="contact-box">
+        <div class="contact-item">
+          <i class="fas fa-envelope contact-icon"></i>
+          <div>
+            <h3>Email</h3>
+            <p>aidilputra@example.com</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="fab fa-github contact-icon"></i>
+          <div>
+            <h3>GitHub</h3>
+            <a href="https://github.com/aidilputra" target="_blank">github.com/aidilputra</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="fab fa-instagram contact-icon"></i>
+          <div>
+            <h3>Instagram</h3>
+            <a href="https://instagram.com/aidilputra" target="_blank">@aidilputra</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="fab fa-whatsapp contact-icon"></i>
+          <div>
+            <h3>WhatsApp</h3>
+            <a href="https://wa.me/6281234567890" target="_blank">+62 812-3456-7890</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <div class="action-buttons">
+      <a href="projects.html">Kembali</a>
+    </div>
+ <footer>
+    <p>&copy; 2025 Topolio. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tentang Saya - Topolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  padding: 15px 20px;
+}
+
+.nav-links li a:hover {
+  color: orange; /* Ganti dengan warna yang kamu suka */
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #111;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    display: none;
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 4rem 2rem 2rem;
+    }
+
+    .about-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+      max-width: 1000px;
+      text-align: left;
+    }
+
+    .about-text {
+      flex: 1 1 400px;
+    }
+
+    .about-text h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: orange;
+    }
+
+    .about-text p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+    .about-image {
+      flex: 1 1 300px;
+    }
+
+    .about-image img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+    }
+
+    .skills-section {
+      margin: 4rem auto 2rem;
+      max-width: 1000px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .skills-section h1 {
+      color: orange;
+      margin-bottom: 1rem;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .skill {
+      background-color: #222;
+      padding: 0.7rem 1.5rem;
+      border-radius: 15px;
+      font-weight: bold;
+      color: orange;
+      font-size: 1rem;
+    }
+
+    .action-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 3rem 0 1rem;
+    }
+
+    .action-buttons a {
+      background-color: orange;
+      color: white;
+      padding: 0.8rem 2rem;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .action-buttons a:hover {
+      background-color: darkorange;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #aaa;
+    }
+
+    .fade-out {
+      opacity: 1;
+      transition: opacity 0.5s ease-out;
+    }
+
+    .fade-out.fade {
+      opacity: 0;
+    }
+
+    .divider {
+      width: 100%;
+      max-width: 1000px;
+      height: 2px;
+      background-color: orange;
+      margin: 3rem 0 2rem;
+    }
+  </style>
+</head>
+<body class="fade-out">
+ <header>
+    <h1>AIDIL PUTRA</h1>
+    <nav class="navbar">
+    <div class="hamburger" id="hamburger">&#9776;</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">Tentang</a></li>
+      <li><a href="projects.html">Project</a></li>
+      <li><a href="contact.html">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
+  </script>
+  </header>
+
+
+  <main>
+    <div class="about-container">
+      <div class="about-text">
+        <h2>Tentang Saya</h2>
+        <p>
+          Halo, saya Aidil Putra, seorang pelajar dari SMK YADIKA SOREANG saat ini saya duduk di kelas 12 jurusan PPLG (Pengembangan Perangkat Lunak Dan Gim) yang penuh semangat dalam dunia pengembangan web. Saya suka membangun website yang menarik, responsif, dan memiliki desain yang estetis.  
+        </p>
+        <p>
+         saya terus mengeksplorasi teknologi baru untuk meningkatkan kemampuan saya dan menghasilkan karya yang bermanfaat.
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="assets/poto.jpg" alt="Foto Aidil Putra" />
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+
+    <div class="skills-section">
+      <h1>Skill Saya</h1>
+      <div class="skills-list">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">php</div>
+        <div class="skill">UI/UX</div>
+        <div class="skill">Git</div>
+        <div class="skill">figma</div>
+        <div class="skill">godot</div>
+      </div>
+    </div>
+
+    <div class="action-buttons">
+      <a href="index.html">Kembali</a>
+      <a href="projects.html">Selanjutnya</a>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Topolio. All rights reserved.
+  </footer>
+
+  <script>
+    document.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", function(e) {
+        const href = this.getAttribute("href");
+        if (href && !href.startsWith("#") && !href.startsWith("mailto:")) {
+          e.preventDefault();
+          document.body.classList.add("fade");
+          setTimeout(() => {
+            window.location.href = href;
+          }, 300);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

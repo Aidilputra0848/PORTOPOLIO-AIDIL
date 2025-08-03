@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Topolio - Home</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Orbitron&family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background: #000;
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  padding: 15px 20px;
+}
+
+.nav-links li a:hover {
+  color: orange; /* Ganti dengan warna yang kamu suka */
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #111;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    display: none;
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
+    .hero {
+      height: 100vh;
+      width: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 2rem;
+      border-radius: 16px;
+      animation: fadeIn 1.5s ease;
+    }
+
+    .overlay p {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .overlay .forto {
+      font-size: 10rem;
+      font-weight: bold;
+      color: orange;
+      letter-spacing: 2px;
+    }
+
+    .overlay .selamat {
+      font-size: 2.5rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .overlay .aidil {
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: white;
+}
+
+
+    .button-to-about {
+      margin-top: 2rem;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      background-color: orange;
+      border: none;
+      border-radius: 30px;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .button-to-about:hover {
+      background-color: darkorange;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .overlay p {
+        font-size: 1.2rem;
+      }
+
+      .overlay .forto {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AIDIL PUTRA</h1>
+    <nav class="navbar">
+    <div class="hamburger" id="hamburger">&#9776;</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">Tentang</a></li>
+      <li><a href="projects.html">Project</a></li>
+      <li><a href="contact.html">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
+  </script>
+  </header>
+
+  <main>
+    <section class="hero">
+      <video autoplay muted loop>
+        <source src="assets/pinterest_video.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+      </video>
+
+      <div class="overlay">
+  <p class="selamat">SELAMAT DATANG DI</p>
+  <p class="forto">PORTOFOLIO</p>
+  <p class="aidil">AIDIL PUTRA</p>
+  <p class="desc">Tempat saya berbagi karya dan pengalaman.</p>
+  <button class="button-to-about" onclick="location.href='about.html'">Lihat Tentang Saya</button>
+</div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Topolio. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
